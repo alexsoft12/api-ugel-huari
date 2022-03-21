@@ -47,4 +47,11 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->is_admin;
     }
+
+    // hasMany AutorizacionDescuento
+    public function autorizacionesDescuentos()
+    {
+        return $this->hasMany(AutorizacionDescuento::class);
+    }
+
 }

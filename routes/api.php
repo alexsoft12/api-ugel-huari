@@ -25,5 +25,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/users/{user}', [UserController::class, 'show']);
     Route::get('/users', [UserController::class, 'index']);
 
-    Route::resource('autorizaciones', AutorizacionDescuentoController::class);
+    Route::resource('authorizations', AutorizacionDescuentoController::class);
 });

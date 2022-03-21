@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Models\AutorizacionDescuento;
-use App\Http\Resources\AutorizacionDescuento as AutorizacionDescuentoResource;
+use App\Http\Resources\AutorizacionDescuentoResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Validator;
@@ -13,16 +13,13 @@ class AutorizacionDescuentoController extends BaseController
     /**
      * Display a listing of the resource.
      *
-     * @return JsonResponse
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        $autorizacionDescuentos = AutorizacionDescuento::all();
+        $autorizacionDescuentos = AutorizacionDescuento::with('user')->paginate();
+        return AutorizacionDescuentoResource::collection($autorizacionDescuentos);
 
-        return $this->sendResponse(
-            AutorizacionDescuentoResource::collection($autorizacionDescuentos),
-            'Autorizaciones de descuentos recuperadas con éxito'
-        );
     }
 
     /**

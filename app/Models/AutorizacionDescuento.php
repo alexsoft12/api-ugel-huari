@@ -11,4 +11,10 @@ class AutorizacionDescuento extends Model
 
     protected $guarded = ['id'];
 
+    // hasOne User
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
+
 }
