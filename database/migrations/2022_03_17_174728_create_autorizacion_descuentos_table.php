@@ -18,12 +18,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('codigo_tercero', 4);
             $table->double('descuento_mensual');
-            $table->integer('nuemero_cuotas');
+            $table->integer('numero_cuotas');
             $table->double('total_descuento');
             $table->date('fecha_compromiso');
             $table->date('fecha_inicio');
             $table->date('fecha_final');
-            $table->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

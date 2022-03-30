@@ -19,7 +19,7 @@ class AutorizacionDescuentoResource extends JsonResource
             'user' => $this->user->name,
             'codigo_tercero' => $this->codigo_tercero,
             'descuento_mensual' => $this->descuento_mensual,
-            'nuemero_cuotas' => $this->nuemero_cuotas,
+            'numero_cuotas' => $this->numero_cuotas,
             'total_descuento' => $this->total_descuento,
             'fecha_compromiso' => $this->fecha_compromiso,
             'fecha_inicio' => $this->fecha_inicio,

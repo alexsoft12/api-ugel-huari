@@ -35,7 +35,7 @@ class AutorizacionDescuentoController extends BaseController
             'user_id' => 'required',
             'codigo_tercero' => 'required',
             'descuento_mensual' => 'required|numeric',
-            'nuemero_cuotas' => 'required|integer',
+            'numero_cuotas' => 'required|integer',
             'total_descuento' => 'required|numeric',
             'fecha_compromiso' => 'required',
             'fecha_inicio' => 'required',
@@ -80,7 +80,7 @@ class AutorizacionDescuentoController extends BaseController
             'user_id' => 'required',
             'codigo_tercero' => 'required',
             'descuento_mensual' => 'required|numeric',
-            'nuemero_cuotas' => 'required|integer',
+            'numero_cuotas' => 'required|integer',
             'total_descuento' => 'required|numeric',
             'fecha_compromiso' => 'required',
             'fecha_inicio' => 'required',
@@ -94,7 +94,7 @@ class AutorizacionDescuentoController extends BaseController
         $autorizacionDescuento->user_id = $input['user_id'];
         $autorizacionDescuento->codigo_tercero = $input['codigo_tercero'];
         $autorizacionDescuento->descuento_mensual = $input['descuento_mensual'];
-        $autorizacionDescuento->nuemero_cuotas = $input['nuemero_cuotas'];
+        $autorizacionDescuento->numero_cuotas = $input['numero_cuotas'];
         $autorizacionDescuento->total_descuento = $input['total_descuento'];
         $autorizacionDescuento->fecha_compromiso = $input['fecha_compromiso'];
         $autorizacionDescuento->fecha_inicio = $input['fecha_inicio'];
